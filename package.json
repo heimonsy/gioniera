@@ -1,0 +1,45 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "webapp templates",
+  "main": "src/entry/index.jsx",
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress --colors --host 0.0.0.0 --port 8081 --content-base ./dist",
+    "build": "webpack --progress --colors",
+    "dist": "rm -rf ./dist/*.js ./dist/*.css && COMPRESS=1 webpack --progress --colors"
+  },
+  "author": "heimonsy",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-dev-server": "^1.11.0",
+    "react-hot-loader": "^1.3.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.12.1",
+    "eslint": "^2.12.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^0.9.0",
+    "file-loader": "^0.8.4",
+    "highlight.js": "^9.5.0",
+    "html-webpack-plugin": "^1.6.2",
+    "jquery": "^2.2.1",
+    "lodash": "~3.10.1",
+    "path": "^0.12.7",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-router": "^2.2.0",
+    "style-loader": "^0.13.0",
+    "sweetalert": "^1.1.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.13.0",
+    "xceptor": "^0.2.6"
+  }
+}

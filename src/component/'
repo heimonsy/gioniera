@@ -1,0 +1,24 @@
+import React from "react";
+
+var Index = React.createClass({
+    handleClick(e) {
+        e.preventDefault();
+        if (this.state.text === "Love Enable") {
+        }
+        this.setState({text: "Love Enable", className: "btn btn-danger btn-lg"});
+    },
+    getInitialState() {
+        return {className: "btn btn-default btn-lg", this.state.className};
+    },
+    render() {
+        return(
+            <div style={{textAlign: "center"}}>
+                <button onClick={this.handleClick} style={{fontSize: 18}} type="button" className={this.state.className}>
+                    Love Disable
+                </button>
+            </div>
+        );
+    }
+});
+
+export default Index;
