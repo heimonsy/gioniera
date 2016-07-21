@@ -10,7 +10,7 @@ var plugins = [
       filename: 'index.html',
       template: './index.html',
       // options
-      title: 'React Templates',
+      title: 'To gioniera',
     }),
     new webpack.ProvidePlugin({
           $: "jquery",

@@ -1,6 +1,7 @@
 import React from "react";
 import hljs from "highlight.js";
 import "./Index.css";
+import HeartRain from "./HeartRain";
 
 var codes = `
 while (true) {
@@ -45,12 +46,17 @@ var Index = React.createClass({
     render() {
         if (this.state.process === "100%") {
             window.setTimeout(function() {
-                console.log(this.state.process);
                 this.setState({text: "Love Enable", className: "btn btn-danger btn-lg", processDisplay: "none", codesDisplay: "block", process: "0%"});
             }.bind(this), 1000);
         }
+
+        var rains = "";
+        if (this.state.text === "Love Enable") {
+            rains = (<HeartRain nums={100}></HeartRain>);
+        }
         return(
             <div className="center-box" style={{width: 600}}>
+                {rains}
                 <div style={{textAlign: "center"}} className="row">
                     <button onClick={this.handleClick} style={{fontSize: 18}} type="button" className={this.state.className}>
                         {this.state.text}
